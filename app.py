@@ -11,7 +11,7 @@ st.info("Running racecards scraper...")
 
 try:
     result = subprocess.run(
-        ["python3", "rpscrape/scripts/racecards.py"],
+        ["python3", "rpscrape/Scripts/racecards.py"],
         capture_output=True, text=True, check=True
     )
     st.success("Scraper ran successfully")
