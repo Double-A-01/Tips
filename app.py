@@ -5,8 +5,17 @@ import subprocess
 import os
 from glob import glob
 from datetime import datetime
+import importlib.util
+
+# Check for requests
+if importlib.util.find_spec("requests") is not None:
+    st.success("✅ 'requests' module is installed")
+else:
+    st.error("❌ 'requests' module is NOT installed")
+    st.stop()
 
 st.title("🏇 UK Horse Racing Tips – Today")
+
 st.info("Running racecards scraper...")
 
 try:
